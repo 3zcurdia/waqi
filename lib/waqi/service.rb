@@ -9,9 +9,9 @@ module Waqi
       @path = if city_name
                 "/feed/#{city_name}/"
               elsif lat && lon
-                "/feed/geo::#{lat};:#{lon}/"
+                "/feed/geo:#{lat};#{lon}/"
               else
-                '/feed/here'
+                '/feed/here/'
               end
     end
 

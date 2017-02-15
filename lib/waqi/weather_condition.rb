@@ -5,18 +5,18 @@ module Waqi
                 :temperature, :wind
 
     def initialize(data)
-      @carbon_monoxyde      = data[:co][:v]
-      @dew                  = data[:d][:v]
-      @relative_humidity    = data[:h][:v]
-      @nitrogen_dioxide     = data[:no2][:v]
-      @ozone                = data[:o3][:v]
-      @atmospheric_pressure = data[:p][:v]
-      @pm10                 = data[:pm10][:v]
-      @pm25                 = data[:pm25][:v]
-      @sulphur_dioxide      = data[:so2][:v]
-      @temperature          = data[:t][:v]
-      @wind                 = data[:w][:v]
-      # @wind_direction      = data[:wd][:v] # unkown value?
+      @carbon_monoxyde      = data.dig(:co, :v)
+      @dew                  = data.dig(:d, :v)
+      @relative_humidity    = data.dig(:h, :v)
+      @nitrogen_dioxide     = data.dig(:no2, :v)
+      @ozone                = data.dig(:o3, :v)
+      @atmospheric_pressure = data.dig(:p, :v)
+      @pm10                 = data.dig(:pm10, :v)
+      @pm25                 = data.dig(:pm25, :v)
+      @sulphur_dioxide      = data.dig(:so2, :v)
+      @temperature          = data.dig(:t, :v)
+      @wind                 = data.dig(:w, :v)
+      # @wind_direction      = data.dig(:wd, :v) # unkown value?
     end
   end
 end

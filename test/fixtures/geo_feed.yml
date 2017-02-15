@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.waqi.info/feed/geo:37.774929;-122.419416/?token=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 15 Feb 2017 09:19:20 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Gen-Time:
+      - '1486'
+      X-Powered-By:
+      - rxstreamer-waqi/1.1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"ok","data":{"aqi":65,"idx":3900,"attributions":[{"url":"http://www.arb.ca.gov/","name":"CARB
+        - California Air Resources Board"},{"url":"http://www.airnow.gov/","name":"Air
+        Now - US EPA"}],"city":{"geo":[37.76595,-122.39902],"name":"San Francisco-Arkansas
+        Street, San Francisco, California","url":"http://aqicn.org/city/california/san-francisco/san-francisco-arkansas-street/"},"dominentpol":"pm25","iaqi":{"co":{"v":6.9},"h":{"v":93},"no2":{"v":28.8},"o3":{"v":1.6},"p":{"v":1024.49},"pm25":{"v":65},"so2":{"v":1.5},"t":{"v":9.95}},"time":{"s":"2017-02-15
+        00:00:00","tz":"-08:00","v":1487116800}}}'
+    http_version:
+  recorded_at: Wed, 15 Feb 2017 09:19:18 GMT
+recorded_with: VCR 3.0.3

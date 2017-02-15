@@ -17,5 +17,10 @@ module Waqi
       response = service.get(token: @token)
       StationData.parse(response)
     end
+
+    def local_feed
+      response = Service.new.get(token: @token)
+      StationData.parse(response)
+    end
   end
 end
