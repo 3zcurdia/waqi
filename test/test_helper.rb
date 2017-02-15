@@ -15,7 +15,6 @@ class Minitest::Test
   end
 
   def station_data
-    Waqi::StationData.new(client, city_name: 'shanghai')
+    client.city_feed('shanghai')
   end
-
 end

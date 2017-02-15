@@ -1,4 +1,3 @@
-require 'faraday'
 require 'json'
 
 module Waqi
@@ -7,28 +6,16 @@ module Waqi
       @token = token
     end
 
-    def build(path)
-      "#{base_url}#{path}?token=#{@token}"
-    end
-
-    def get(path)
-      parse_response(Faraday.get(build(path)))
-    end
-
     def city_feed(city_name)
-      StationData.new(self, city_name: city_name)
+      service = Service.new(city_name: city_name)
+      response = service.get(token: @token)
+      StationData.parse(response)
     end
 
-    private
-
-    def base_url
-      @base_url ||= 'https://api.waqi.info'.freeze
-    end
-
-    def parse_response(response)
-      parsed_response = JSON.parse(response.body, symbolize_names: true)
-      raise "API Error: #{parsed_response[:message]}" if parsed_response[:status] == 'error'
-      parsed_response[:data]
+    def geo_feed(lat, lon)
+      service = Service.new(lat: lat, lon: lon)
+      response = service.get(token: @token)
+      StationData.parse(response)
     end
   end
 end
