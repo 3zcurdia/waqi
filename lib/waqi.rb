@@ -1,5 +1,8 @@
-require "waqi/version"
+require 'waqi/version'
+require 'waqi/client'
+require 'waqi/attribution'
+require 'waqi/weather_condition'
+require 'waqi/city'
 
 module Waqi
-  # Your code goes here...
 end
