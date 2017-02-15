@@ -16,7 +16,7 @@ module Waqi
     end
 
     def city_feed(city_name)
-      City.new(self, city_name)
+      StationData.new(self, city_name: city_name)
     end
 
     private

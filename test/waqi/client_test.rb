@@ -11,7 +11,7 @@ class ClientTest < Minitest::Test
 
   def test_city_feed
     VCR.use_cassette('city_feed') do
-      assert_instance_of Waqi::City, subject.city_feed('shanghai')
+      assert_instance_of Waqi::StationData, subject.city_feed('shanghai')
     end
   end
 end
