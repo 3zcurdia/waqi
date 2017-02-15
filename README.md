@@ -1,4 +1,5 @@
 # Waqi
+[![Build Status](https://travis-ci.org/3zcurdia/waqi.svg?branch=master)](https://travis-ci.org/3zcurdia/waqi)
 
 Air Quality Open Data Platform gem wrapper
 
