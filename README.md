@@ -1,5 +1,5 @@
 # Waqi
-[![Build Status](https://travis-ci.org/3zcurdia/waqi.svg?branch=master)](https://travis-ci.org/3zcurdia/waqi)
+[![Build Status](https://travis-ci.org/3zcurdia/waqi.svg?branch=master)](https://travis-ci.org/3zcurdia/waqi)[![Code Climate](https://lima.codeclimate.com/github/3zcurdia/waqi/badges/gpa.svg)](https://lima.codeclimate.com/github/3zcurdia/waqi)
 
 Air Quality Open Data Platform gem wrapper
 
@@ -18,8 +18,7 @@ Or install it yourself as:
     $ gem install waqi
 
 ## Usage
-
-TODO: Write usage instructions here
+...
 
 ## Contributing
 
