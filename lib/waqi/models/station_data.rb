@@ -15,14 +15,14 @@ module Waqi
       )
     end
 
-    def initialize(aqi: nil, idx: nil, uid: nil, station: nil, dominant_pollution: nil, weather_condition: nil, timestamp: nil)
-      @aqi = aqi
-      @idx = idx
-      @uid = uid
-      @station = station
-      @dominant_pollution = dominant_pollution
-      @weather_condition = weather_condition
-      @timestamp = timestamp
+    def initialize(args = {})
+      @aqi = args[:aqi]
+      @idx = args[:idx]
+      @uid = args[:uid]
+      @station = args[:station]
+      @dominant_pollution = args[:dominant_pollution]
+      @weather_condition = args[:weather_condition]
+      @timestamp = args[:timestamp]
     end
   end
 end
