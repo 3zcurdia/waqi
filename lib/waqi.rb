@@ -1,11 +1,11 @@
 require 'waqi/version'
-require 'waqi/attribution'
-require 'waqi/city'
-require 'waqi/client'
+require 'waqi/models/attribution'
+require 'waqi/models/city'
+require 'waqi/models/station'
+require 'waqi/models/station_data'
+require 'waqi/models/weather_condition'
 require 'waqi/service'
-require 'waqi/station'
-require 'waqi/station_data'
-require 'waqi/weather_condition'
+require 'waqi/client'
 
 module Waqi
 end
