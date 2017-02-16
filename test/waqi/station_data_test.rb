@@ -22,4 +22,18 @@ class StationDataTest < Minitest::Test
       assert_equal '+08:00', data.timestamp.zone
     end
   end
+
+  def test_parse_search
+    VCR.use_cassette('search') do
+      data = search_data
+      assert_instance_of Array, data
+      assert_equal '-', data.last.aqi
+      assert_equal 8686, data.last.uid
+      refute data.last.idx
+      refute data.last.dominant_pollution
+      assert_equal 'City Railway Station, Bangalore, India', data.last.station.city.name
+      assert data.last.station.attributions.empty?
+      assert data.last.weather_condition.empty?
+    end
+  end
 end

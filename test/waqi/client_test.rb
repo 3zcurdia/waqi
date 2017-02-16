@@ -30,4 +30,16 @@ class ClientTest < Minitest::Test
       assert_equal 'Merced, México', station_data.station.city.name
     end
   end
+
+  def test_map_stations
+    VCR.use_cassette('map_bounds') do
+      assert map_data
+    end
+  end
+
+  def test_search
+    VCR.use_cassette('search') do
+      assert search_data
+    end
+  end
 end

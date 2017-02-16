@@ -6,7 +6,7 @@ module Waqi
       end
 
       def path
-        '/search/'
+        '/search/'.freeze
       end
     end
   end

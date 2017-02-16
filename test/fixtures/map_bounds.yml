@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.waqi.info/map/bounds/?latlng=39.379436,116.09123,40.235643,116.784382&token=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 Feb 2017 06:41:42 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Gen-Time:
+      - '1685'
+      X-Powered-By:
+      - rxstreamer-waqi/1.1
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"ok","data":[{"lat":39.824,"lon":116.146,"uid":456,"aqi":"57"},{"lat":39.954592,"lon":116.468117,"uid":1451,"aqi":"55"},{"lat":39.876,"lon":116.394,"uid":477,"aqi":"46"},{"lat":40.127,"lon":116.655,"uid":462,"aqi":"36"},{"lat":39.937,"lon":116.461,"uid":451,"aqi":"30"},{"lat":40.002,"lon":116.207,"uid":454,"aqi":"149"},{"lat":39.742,"lon":116.136,"uid":458,"aqi":"61"},{"lat":39.856,"lon":116.368,"uid":479,"aqi":"55"},{"lat":39.518,"lon":116.684,"uid":688,"aqi":"53"},{"lat":39.987,"lon":116.287,"uid":452,"aqi":"50"},{"lat":39.939,"lon":116.483,"uid":480,"aqi":"42"},{"lat":40.09,"lon":116.174,"uid":453,"aqi":"53"},{"lat":39.534,"lon":116.737,"uid":690,"aqi":"93"},{"lat":39.954,"lon":116.349,"uid":478,"aqi":"57"},{"lat":39.899,"lon":116.395,"uid":476,"aqi":"57"},{"lat":39.52,"lon":116.3,"uid":474,"aqi":"65"},{"lat":39.929,"lon":116.339,"uid":448,"aqi":"61"},{"lat":39.795,"lon":116.506,"uid":460,"aqi":"61"},{"lat":39.575,"lon":116.773,"uid":689,"aqi":"61"},{"lat":39.914,"lon":116.184,"uid":457,"aqi":"57"},{"lat":39.718,"lon":116.404,"uid":459,"aqi":"55"},{"lat":39.712,"lon":116.783,"uid":473,"aqi":"42"},{"lat":39.886,"lon":116.663,"uid":461,"aqi":"42"},{"lat":39.557,"lon":116.715,"uid":687,"aqi":"-"},{"lat":39.878,"lon":116.352,"uid":449,"aqi":"50"},{"lat":39.886,"lon":116.407,"uid":447,"aqi":"38"},{"lat":39.445,"lon":116.305,"uid":4674,"aqi":"129"},{"lat":39.538047,"lon":116.683752,"uid":1463,"aqi":"66"},{"lat":39.929,"lon":116.417,"uid":446,"aqi":"63"},{"lat":39.937,"lon":116.106,"uid":464,"aqi":"57"},{"lat":40.217,"lon":116.23,"uid":463,"aqi":"46"},{"lat":39.863,"lon":116.279,"uid":455,"aqi":"46"},{"lat":39.982,"lon":116.397,"uid":450,"aqi":"46"}]}'
+    http_version:
+  recorded_at: Thu, 16 Feb 2017 06:41:41 GMT
+recorded_with: VCR 3.0.3

@@ -7,7 +7,7 @@ module Waqi
 
       def initialize(params = {})
         @connection = Faraday.new(url: BASE_URL)
-        @params = {}
+        @params = params
       end
 
       def get(options = {})
@@ -22,7 +22,7 @@ module Waqi
 
       def parse(response)
         parsed_response = JSON.parse(response.body, symbolize_names: true)
-        raise "API Error: #{parsed_response[:message]}" if parsed_response[:status] == 'error'
+        raise "API Error: #{parsed_response[:data]}" if parsed_response[:status] == 'error'
         parsed_response[:data]
       end
     end
