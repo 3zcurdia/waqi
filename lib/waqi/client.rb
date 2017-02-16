@@ -1,4 +1,5 @@
 require 'json'
+require 'waqi/services'
 
 module Waqi
   class Client
@@ -7,19 +8,19 @@ module Waqi
     end
 
     def city_feed(city_name)
-      service = Service.new(city_name: city_name)
+      service = Service::City.new(city_name)
       response = service.get(token: @token)
       StationData.parse(response)
     end
 
     def geo_feed(lat, lon)
-      service = Service.new(lat: lat, lon: lon)
+      service = Service::Geolocation.new(lat,lon)
       response = service.get(token: @token)
       StationData.parse(response)
     end
 
     def local_feed
-      response = Service.new.get(token: @token)
+      response = Service::City.new().get(token: @token)
       StationData.parse(response)
     end
   end

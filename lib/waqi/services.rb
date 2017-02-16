@@ -1,0 +1,5 @@
+require 'waqi/services/base'
+require 'waqi/services/city'
+require 'waqi/services/geolocation'
+require 'waqi/services/map'
+require 'waqi/services/search'
