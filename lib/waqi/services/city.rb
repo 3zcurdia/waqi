@@ -7,7 +7,7 @@ module Waqi
       end
 
       def path
-        "/feed/#{@name}/"
+        URI.escape("/feed/#{@name}/")
       end
     end
   end

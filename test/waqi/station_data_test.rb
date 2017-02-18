@@ -33,7 +33,7 @@ class StationDataTest < Minitest::Test
       refute data.last.dominant_pollution
       assert_equal 'City Railway Station, Bangalore, India', data.last.station.city.name
       assert data.last.station.attributions.empty?
-      assert data.last.weather_condition.empty?
+      refute data.last.weather_condition
     end
   end
 end
