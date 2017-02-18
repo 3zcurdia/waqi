@@ -1,4 +1,3 @@
-require 'json'
 require 'waqi/services'
 
 module Waqi
