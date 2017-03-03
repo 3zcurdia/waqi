@@ -31,6 +31,12 @@ City feed, it returns StationData
   client.city_feed('shanghai')
 ```
 
+Station feed, it returns StationData
+
+```ruby
+  client.station_feed(400)
+```
+
 Geolocalized feed, it returns StationData
 
 ```ruby
