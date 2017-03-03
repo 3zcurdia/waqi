@@ -6,6 +6,11 @@ module Waqi
       @token = token
     end
 
+    def station_feed(station_id)
+      response = Service::Station.new(station_id).get(token: @token)
+      StationData.parse(response)
+    end
+
     def city_feed(city_name)
       response = Service::City.new(city_name).get(token: @token)
       StationData.parse(response)

@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.waqi.info/feed/@400/?token=demo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Mar 2017 02:06:27 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Gen-Time:
+      - '138'
+      X-Powered-By:
+      - rxstreamer-waqi/1.1
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJzdGF0dXMiOiJvayIsImRhdGEiOnsiYXFpIjoxMjIsImlkeCI6MTQzNywi
+        YXR0cmlidXRpb25zIjpbeyJ1cmwiOiJodHRwOi8vd3d3LnNlbWMuZ292LmNu
+        LyIsIm5hbWUiOiJTaGFuZ2hhaSBFbnZpcm9ubWVudCBNb25pdG9yaW5nIENl
+        bnRlcijkuIrmtbfluILnjq/looPnm5HmtYvkuK3lv4MpIn0seyJ1cmwiOiJo
+        dHRwOi8vMTEzLjEwOC4xNDIuMTQ3OjIwMDM1L2VtY3B1Ymxpc2gvIiwibmFt
+        ZSI6IkNoaW5hIE5hdGlvbmFsIFVyYmFuIGFpciBxdWFsaXR5IHJlYWwtdGlt
+        ZSBwdWJsaXNoaW5nIHBsYXRmb3JtICjlhajlm73ln47luILnqbrmsJTotKjp
+        h4/lrp7ml7blj5HluIPlubPlj7ApIn0seyJ1cmwiOiJodHRwOi8vc2hhbmdo
+        YWkudXNlbWJhc3N5LWNoaW5hLm9yZy5jbi9haXJtb25pdG9yLmh0bWwiLCJu
+        YW1lIjoiVS5TLiBDb25zdWxhdGUgU2hhbmdoYWkgQWlyIFF1YWxpdHkgTW9u
+        aXRvciJ9XSwiY2l0eSI6eyJnZW8iOlsxMjEuNDQ4OTAxNywzMS4yMDQ3Mzcy
+        XSwibmFtZSI6IlNoYW5naGFpIiwidXJsIjoiaHR0cDovL2FxaWNuLm9yZy9j
+        aXR5L3NoYW5naGFpLyJ9LCJkb21pbmVudHBvbCI6InBtMjUiLCJpYXFpIjp7
+        ImNvIjp7InYiOjUuNX0sImQiOnsidiI6MH0sImgiOnsidiI6NzV9LCJubzIi
+        OnsidiI6MzQuM30sIm8zIjp7InYiOjEzfSwicCI6eyJ2IjoxMDIyfSwicG0x
+        MCI6eyJ2Ijo1M30sInBtMjUiOnsidiI6MTIyfSwic28yIjp7InYiOjcuNn0s
+        InQiOnsidiI6NH0sInciOnsidiI6MS44fSwid2QiOnsidiI6MTQwfX0sInRp
+        bWUiOnsicyI6IjIwMTctMDMtMDMgMDY6MDA6MDAiLCJ0eiI6IiswODowMCIs
+        InYiOjE0ODg1MjA4MDB9fX0=
+    http_version: 
+  recorded_at: Fri, 03 Mar 2017 02:06:25 GMT
+recorded_with: VCR 3.0.3
