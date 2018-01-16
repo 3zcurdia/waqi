@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'faraday'
 require 'json'
 module Waqi
   module Service
     class Base
-      BASE_URL = 'https://api.waqi.info'.freeze
+      BASE_URL = 'https://api.waqi.info'
 
       def initialize(params = {})
         @connection = Faraday.new(url: BASE_URL)
@@ -11,11 +13,11 @@ module Waqi
       end
 
       def get(options = {})
-        parse(@connection.get(self.path, @params.merge(options)))
+        parse(@connection.get(path, @params.merge(options)))
       end
 
       def path
-        raise "path has not beed defined"
+        raise 'path has not beed defined'
       end
 
       private

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'waqi/services/base'
 require 'waqi/services/city'
 require 'waqi/services/geolocation'

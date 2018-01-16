@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Waqi
   module Service
     class Map < Base
@@ -6,7 +8,7 @@ module Waqi
       end
 
       def path
-        '/map/bounds/'.freeze
+        '/map/bounds/'
       end
     end
   end

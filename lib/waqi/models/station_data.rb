@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Waqi
   class StationData
     attr_reader :aqi, :idx, :uid, :station, :dominant_pollution, :weather_condition, :timestamp
@@ -16,7 +18,9 @@ module Waqi
     end
 
     def self.parse_time(time_data)
-      DateTime.parse("#{time_data[:s] || time_data[:stime]}#{time_data[:tz]}") rescue nil
+      DateTime.parse("#{time_data[:s] || time_data[:stime]}#{time_data[:tz]}")
+    rescue StandardError
+      nil
     end
 
     def initialize(args = {})

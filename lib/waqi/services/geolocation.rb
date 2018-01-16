@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 module Waqi
   module Service
     class Geolocation < Base
       def initialize(lat, lon)
         super()
-        @lat, @lon = lat, lon
+        @lat = lat
+        @lon = lon
       end
 
       def path

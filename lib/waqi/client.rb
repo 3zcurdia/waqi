@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'waqi/services'
 
 module Waqi
@@ -17,12 +19,12 @@ module Waqi
     end
 
     def geo_feed(lat, lon)
-      response = Service::Geolocation.new(lat,lon).get(token: @token)
+      response = Service::Geolocation.new(lat, lon).get(token: @token)
       StationData.parse(response)
     end
 
     def local_feed
-      response = Service::City.new().get(token: @token)
+      response = Service::City.new.get(token: @token)
       StationData.parse(response)
     end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Waqi
   module Service
     class Search < Base
@@ -6,7 +8,7 @@ module Waqi
       end
 
       def path
-        '/search/'.freeze
+        '/search/'
       end
     end
   end

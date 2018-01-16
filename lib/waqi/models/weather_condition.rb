@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Waqi
   class WeatherCondition
     attr_reader :carbon_monoxyde, :dew, :relative_humidity, :nitrogen_dioxide,

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Waqi
   module Service
     class City < Base
