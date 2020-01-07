@@ -27,6 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'vcr', '~> 5.0'
   spec.add_development_dependency 'webmock', '~> 3.6'
-  spec.add_dependency 'faraday', '~>  0.10'
+  spec.add_dependency 'faraday', '>= 0.10', '< 2.0'
   spec.add_dependency 'json', '~> 2.0'
 end
